@@ -85,7 +85,7 @@ $(document).ready(function(){
 
     $("#receipt").slideDown();
 
-    $("input").attr('checked', false);
+    $(".checkbox-topping input").attr('checked', false);
 
   });
 });
