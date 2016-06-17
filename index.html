@@ -16,13 +16,10 @@
         <div class="form-group">
           <h4>Pizza size:</h4>
           <div class="radio radio-size">
-            <label><input type="radio" name="optradio">Small</label>
+            <label><input type="radio" name="size-radio" value="Regular">Regular</label>
           </div>
           <div class="radio radio-size">
-            <label><input type="radio" name="optradio">Medium</label>
-          </div>
-          <div class="radio radio-size">
-            <label><input type="radio" name="optradio">Large</label>
+            <label><input type="radio" name="size-radio" value="Large">Large</label>
           </div>
         </div>
         <div class="form-group">
@@ -45,6 +42,16 @@
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
+
+      <div id="receipt">
+        <h3>Receipt</h3>
+        <p>Thanks for the order, <span class="name"></span>!</p>
+        <h4><span id="pizza-size-result"></span> pizza with the following topping(s):</h4>
+        <ul id="toppings-result">
+        </ul>
+
+        <h4 id="price">Total: <span class="price"></span></h4>
+      </div>
 
     </div>
   </body>
