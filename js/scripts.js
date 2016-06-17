@@ -49,10 +49,19 @@ $(document).ready(function(){
     var pizzaCity = $("input#city").val();
     var pizzaState = $("select#state").val();
     var pizzaZip = $("input#zip-code").val();
+    console.log(pizzaName);
     console.log("Street: " + pizzaAddress);
     console.log("City: " + pizzaCity);
     console.log("State: " + pizzaState);
     console.log("ZIP: " + pizzaZip);
+
+    if (pizzaName === "") {
+      $(".form-group-name").addClass("has-error").append("<span class='errormsg'>Please enter your name.</span>");
+      return false;
+    } else {
+      $(".errormsg").remove();
+      $(".form-group-name").removeClass("has-error");
+    }
 
     console.log(pizzaSize);
     console.log(pizzaToppings);
@@ -73,8 +82,13 @@ $(document).ready(function(){
     // display results in receipt section
     $(".name").text(pizzaName);
     $("#pizza-size-result").text(pizzaSize);
-    for (var index = 0; index < pizzaToppings.length; index += 1) {
-      $("#toppings-result").append("<li>" + pizzaToppings[index] + "</li>");
+    if (pizzaToppings != ""){
+      for (var index = 0; index < pizzaToppings.length; index += 1) {
+        $("#toppings-result").append("<li>" + pizzaToppings[index] + "</li>");
+      }
+      $("#withtoppings").show();
+    } else {
+        $("#withtoppings").hide();
     }
     $(".price").text("$" + neworder.price);
 
@@ -85,6 +99,8 @@ $(document).ready(function(){
 
 
     $("#receipt").slideDown();
+
+    $("input").attr('checked', false);
 
   });
 

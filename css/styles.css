@@ -1,5 +1,36 @@
+H1, H2, H3, H4, H5 {
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+#top-section h2 {
+  text-align: center;
+  font-weight: 700;
+}
+
+#header h1{
+  font-size: 5em;
+}
+
+#header .heading {
+  color: white;
+  font-weight:800;
+}
+
 #receipt{
   display: none;
+  background-image:url('../img/pizzatexture.png');
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+#receipt .paper{
+  width: 500px;
+  margin: auto;
+  background-color: white;
+  padding: 30px;
+  box-shadow: 2px 2px 5px #888888;
 }
 
 #address-section {
@@ -11,17 +42,29 @@
 }
 
 #header {
-  padding-top: 30px;
+  padding-top: 0px;
   padding-bottom: 30px;
-  background-image:url("../img/pattern3.jpg");
+  background-image:url("../img/pizzatexture.png");
+  text-align: center;
 }
 
 #pizza-logo {
   display: block;
   margin: auto;
-  max-height: 280px;
+  max-height: 200px;
 }
 
-body {
+form {
+  margin-bottom: 30px;
+}
+/*body {
   padding-bottom: 30px;
+}*/
+
+#receipt h3 {
+  font-weight: 700;
+}
+
+.errormsg {
+  color: red;
 }

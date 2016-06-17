@@ -2,22 +2,25 @@
 <html>
   <head>
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,800' rel='stylesheet' type='text/css'>
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="js/scripts.js" type="text/javascript"></script>
     <meta charset="utf-8">
-    <title>Pizza Party</title>
+    <title>PIZZA PRTY</title>
   </head>
   <body>
     <div id="header">
       <div class="container">
-        <img src="img/pizzaparty.gif" class="img-responsive" id="pizza-logo">
+        <img src="img/chandelier.png" class="img-responsive" id="pizza-logo">
+        <h1 class="heading">P-i-z-z-a<br>P-r-t-y</h1>
+        <h2 class="heading">Pizzeria & Delivery</h2>
       </div>
     </div>
     <div class="container">
       <div id="top-section">
-        <h3></h3>
-        <p>Aesthetic pitchfork gochujang listicle chartreuse. Fixie tilde jean shorts flexitarian. Portland ugh microdosing, lumbersexual taxidermy affogato vinyl vegan semiotics fanny pack neutra godard. Bitters slow-carb mixtape bushwick, venmo flexitarian fanny pack cray lomo. Actually whatever forage, tofu cliche venmo ramps bushwick master cleanse squid. Put a bird on it lumbersexual before they sold out, pickled ennui leggings williamsburg street art stumptown cred 90's pork belly. Mlkshk schlitz quinoa normcore gentrify, man braid asymmetrical keffiyeh tilde.</p>
+        <h2>Don't get caught with a wack calzone.</h2>
+        <p>Hey yo Tony where'd you get that fresh pepperoni? Your toppings are ill but your cheese is hole-y. Only order one slice when you're feeling lonely, 'cos the sausage tastes like stale bologna. Still better than nothin', you're feelin' alright. You know my girl eats her pizza with a diet sprite. Order garlic knots, and she'll stay the night. Getting crazy with the spinach when my pie is white. In France they eat pizza like "Oh mon dieu. C'est la plus belle pizza que j'ai jamais vu. Le fromage est frais, c'est vraiment mieux. Que le dernier film de Gérard Depardieu."</p>
       </div>
       <form id="pizza-order">
         <div class="form-group">
@@ -25,15 +28,15 @@
             <div class="col-lg-12">
               <h3>Select your pizza size:</h3>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-3 col-xs-6">
               <div class="radio radio-size">
-                <label><input type="radio" name="size-radio" value="Regular">
+                <label><input type="radio" name="size-radio" value="Regular" checked>
                   Regular
                   <img src="img/regular.jpg" class="img-responsive">
                 </label>
               </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-3 col-xs-6">
               <div class="radio radio-size">
                 <label><input type="radio" name="size-radio" value="Large">
                   Large
@@ -46,30 +49,30 @@
         <div class="form-group">
           <h3>Select your toppings:</h3>
           <div class="checkbox checkbox-topping">
-            <label><input type="checkbox" value="pepperoni" name="topping">Pepperoni</label>
+            <label><input type="checkbox" value="Pepperoni" name="topping">Pepperoni</label>
           </div>
           <div class="checkbox checkbox-topping">
-            <label><input type="checkbox" value="artichoke" name="topping">Artichoke</label>
+            <label><input type="checkbox" value="Artichokes" name="topping">Artichokes</label>
           </div>
           <div class="checkbox checkbox-topping">
-            <label><input type="checkbox" value="greenpeppers" name="topping">Green Peppers</label>
+            <label><input type="checkbox" value="Green Peppers" name="topping">Green Peppers</label>
           </div>
           <div class="checkbox checkbox-topping">
-            <label><input type="checkbox" value="mushrooms" name="topping">Mushrooms</label>
+            <label><input type="checkbox" value="Mushrooms" name="topping">Mushrooms</label>
           </div>
           <div class="checkbox checkbox-topping">
-            <label><input type="checkbox" value="onions" name="topping">Onions</label>
+            <label><input type="checkbox" value="Onions" name="topping">Sausage</label>
           </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group form-group-name">
           <label for="name"><h3>Your full name:</h3></label>
           <input id="name" class="form-control"></input>
         </div>
         <div class="form-group">
           <h3>Pick up or Delivery?</h3>
           <div class="radio radio-delivery">
-            <label><input type="radio" name="radio-delivery" value="pickup" id="pickup">Pickup</label>
+            <label><input type="radio" name="radio-delivery" value="pickup" id="pickup" checked>Pickup</label>
           </div>
           <div class="radio radio-delivery">
             <label><input type="radio" name="radio-delivery" value="delivery" id="delivery">Delivery</label>
@@ -101,21 +104,22 @@
 
         <button type="submit" class="btn btn-warning">Submit</button>
       </form>
-
-      <div id="receipt">
-        <h3>Receipt</h3>
+    </div>
+    <div id="receipt">
+      <div class="paper">
+      <h3>Receipt</h3>
         <p>Thanks for the order, <span class="name"></span>!</p>
-        <h4><span id="pizza-size-result"></span> pizza with the following topping(s):</h4>
-        <ul id="toppings-result">
-        </ul>
+      <h4><span id="pizza-size-result"></span> pizza <span id="withtoppings">with the following topping(s):</span></h4>
+      <ul id="toppings-result">
+      </ul>
 
-        <h4 id="price">Total: <span class="price"></span></h4>
+      <h4 id="price">Total: <span class="price"></span></h4>
 
-        <div id="address-result">
-          <h4>To be delivered to:</h4>
-          <p class="address-result"></p>
+      <div id="address-result">
+        <h4>To be delivered to:</h4>
+        <p class="address-result"></p>
       </div>
-
+      </div>
     </div>
   </body>
 </html>
