@@ -9,3 +9,19 @@
 #address-result {
   display: none;
 }
+
+#header {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-image:url("../img/pattern3.jpg");
+}
+
+#pizza-logo {
+  display: block;
+  margin: auto;
+  max-height: 280px;
+}
+
+body {
+  padding-bottom: 30px;
+}
