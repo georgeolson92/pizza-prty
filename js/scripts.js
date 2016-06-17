@@ -29,12 +29,31 @@ Order.prototype.priceCalculate = function() {
 
 
 $(document).ready(function(){
+  $(".radio-delivery #delivery").click(function(){
+    $("#address-section").addClass("yespls").fadeIn();
+  });
+  $(".radio-delivery #pickup").click(function(){
+    $("#address-section").removeClass("yespls").fadeOut();
+  });
+
   $("form#pizza-order").submit(function(event){
     debugger;
     event.preventDefault();
 
     // collect info from user and create new object
     var pizzaSize = $(".radio-size input[type='radio']:checked").val();
+    var pizzaName = $("input#name").val();
+    var pizzaDelivery = $("input[name='radio-delivery']:checked").val();
+    console.log(pizzaDelivery);
+    var pizzaAddress = $("input#street").val();
+    var pizzaCity = $("input#city").val();
+    var pizzaState = $("select#state").val();
+    var pizzaZip = $("input#zip-code").val();
+    console.log("Street: " + pizzaAddress);
+    console.log("City: " + pizzaCity);
+    console.log("State: " + pizzaState);
+    console.log("ZIP: " + pizzaZip);
+
     console.log(pizzaSize);
     console.log(pizzaToppings);
     var neworder = new Order(pizzaSize, pizzaToppings);
@@ -52,11 +71,19 @@ $(document).ready(function(){
     console.log(neworder.size, neworder.toppings);
 
     // display results in receipt section
+    $(".name").text(pizzaName);
     $("#pizza-size-result").text(pizzaSize);
     for (var index = 0; index < pizzaToppings.length; index += 1) {
       $("#toppings-result").append("<li>" + pizzaToppings[index] + "</li>");
     }
     $(".price").text("$" + neworder.price);
+
+    if ($("#address-section").hasClass("yespls")){
+      $("#address-result").show();
+      $(".address-result").text(pizzaAddress + ", " + pizzaCity + ", " + pizzaState + ". " + pizzaZip);
+    }
+
+
     $("#receipt").slideDown();
 
   });

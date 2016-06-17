@@ -1,3 +1,11 @@
 #receipt{
   display: none;
 }
+
+#address-section {
+  display: none;
+}
+
+#address-result {
+  display: none;
+}

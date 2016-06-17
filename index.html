@@ -40,6 +40,44 @@
             <label><input type="checkbox" value="onions" name="topping">Onions</label>
           </div>
         </div>
+
+        <div class="form-group">
+          <label for="name"><h4>Your full name</h4></label>
+          <input id="name" class="form-control"></input>
+        </div>
+        <div class="form-group">
+          <h4>Pick up or Delivery?</h4>
+          <div class="radio radio-delivery">
+            <label><input type="radio" name="radio-delivery" value="pickup" id="pickup">Pickup</label>
+          </div>
+          <div class="radio radio-delivery">
+            <label><input type="radio" name="radio-delivery" value="delivery" id="delivery">Delivery</label>
+          </div>
+        </div>
+
+        <div id="address-section">
+          <h4>Please enter your address:</h4>
+          <div class="form-group">
+            <label for="street">Street Address:</label>
+            <input id="street" type="text" class="form-control"></input>
+          </div>
+          <div class="form-group">
+            <label for="city">City:</label>
+            <input id="city" type="text" class="form-control"></input>
+          </div>
+          <div class="form-group">
+            <label for="street">State:</label>
+            <select class="form-control" id="state">
+              <option value="OR">Oregon</option>
+              <option value="WA">Washington</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="zip-code">ZIP Code:</label>
+            <input id="zip-code" type="number" class="form-control"></input>
+          </div>
+        </div>
+
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
 
@@ -51,6 +89,10 @@
         </ul>
 
         <h4 id="price">Total: <span class="price"></span></h4>
+
+        <div id="address-result">
+          <h4>To be delivered to:</h4>
+          <p class="address-result"></p>
       </div>
 
     </div>
